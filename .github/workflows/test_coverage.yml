@@ -33,6 +33,8 @@ jobs:
 
       - name: Test coverage
         run: |
+          install.packages("remotes")
+          library(remotes)
           remotes::install_cran("covr")
           covr::codecov(token = "${{secrets.CODECOV_TOKEN}}")
         shell: Rscript {0}
