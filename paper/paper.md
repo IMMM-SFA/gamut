@@ -33,7 +33,7 @@ affiliations:
 
 ### Summary
 
-Most cities in the United States withdraw surface water to meet public water supply needs. The lands on which this water is generated are often developed for human activities&mdash;such as agriculture, mining, and industry&mdash;that may compete for water resources or contaminate water supplies. Cities are thereby connected to other sectors through their water supply catchments. This connection is an example of an multisectoral urban teleconnection. The Geospatial Analytics for Multisectoral Urban Teleconnections (`gamut`) package provides national-scale information on these teleconnections by combining land use data with hydrological analysis to characterize urban source watershed human interactions across the conterminous United States (Figure 1).
+Most cities in the United States withdraw surface water to meet public water supply needs. The lands on which this water is generated are often developed for human activities&mdash;such as agriculture, mining, and industry&mdash;that may compete for water resources or contaminate water supplies. Cities are thereby connected to other sectors through their water supply catchments. This connection is an example of an multisectoral urban teleconnection, which is a "conceptual framework that explicitly links land changes to underlying urbanization dynamics" [@Seto:2012].The Geospatial Analytics for Multisectoral Urban Teleconnections (`gamut`) package provides national-scale information on these teleconnections by combining land use data with hydrological analysis to characterize urban source watershed human interactions across the conterminous United States (Figure 1).
 
 ![The `gamut` package analyzes urban cities and their watersheds all across the conterminous U.S. As shown in the figure, it can look at characteristics like land use inside watershed boundaries.](gamut_figure.png){ width=95% }
 
@@ -104,7 +104,12 @@ MultiSector Dynamics (MSD) research  is the study of the co-evolution of human a
 
 The `gamut` package is open source and may be downloaded using the [devtools](https://devtools.r-lib.org/) package [@Wickham:2020].
 
-`devtools::install_github("https://github.com/IMMM-SFA/gamut.git")`
+```r
+install.packages("devtools")
+library(devtools)
+devtools::install_github('IMMM-SFA/gamut')
+library(gamut)
+```
 
 ### Dependencies
 
