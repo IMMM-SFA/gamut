@@ -5,7 +5,7 @@ always_allow_html: yes
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-![build](https://github.com/IMMM-SFA/gamut/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/IMMM-SFA/gamut/branch/master/graph/badge.svg?token=uF3EvxwvCO)](https://codecov.io/gh/IMMM-SFA/gamut) 
+![build](https://github.com/IMMM-SFA/gamut/workflows/build/badge.svg) [![codecov](https://codecov.io/gh/IMMM-SFA/gamut/branch/main/graph/badge.svg?token=uF3EvxwvCO)](https://codecov.io/gh/IMMM-SFA/gamut) 
 [![DOI](https://zenodo.org/badge/203447802.svg)](https://zenodo.org/badge/latestdoi/203447802) 
 
 # `gamut`
@@ -22,6 +22,8 @@ always_allow_html: yes
 ## Get Started with `gamut`
 `gamut` can be installed directly from this repository using the R `devtools` package. From an R prompt, run the command:
 ```r
+install.packages("devtools")
+library(devtools)
 devtools::install_github('IMMM-SFA/gamut')
 library(gamut)
 ```
@@ -71,7 +73,6 @@ The package will cycle through each city and their respective watersheds, and pr
 ```{r,echo=FALSE, message=FALSE, warning=FALSE}
 library(vroom)
 vroom("inst/extdata/example_dataset.csv") -> results
-results[3,2] <- "New York, NY"
 knitr::kable(results)
 ```
 
