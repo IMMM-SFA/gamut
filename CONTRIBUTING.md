@@ -17,7 +17,7 @@ If you would like to suggest new ideas or functionality for the `gamut` package,
 
 It is best to follow the standard Github workflow for development.
 
-1. Clone [the repo][repository] to your computer using `git clone`. 
+1. Clone [the repo][repository] to your computer using `git clone "https://github.com/IMMM-SFA/gamut"`. 
 2. Open the RStudio `gamut` project file (`.Rproj`), and create a new branch off of the `dev` branch.
 3. Once you are on a new branch, make your changes:
     * Write your code.
