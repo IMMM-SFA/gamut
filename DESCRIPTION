@@ -42,7 +42,7 @@ Imports:
     reservoir,
     rgdal,
     rgeos,
-    sf (>= 0.9-4),
+    sf (== 0.9-4),
     sp,
     spex,
     stringr,
