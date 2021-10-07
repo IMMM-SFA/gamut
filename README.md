@@ -23,7 +23,7 @@ distance apart.
 
 ## Get Started with `gamut`
 
-`gamut` can be installed directly from this repository using the R
+`gamut` can be installed remotely from the repository using the R
 `devtools` package. From an R prompt, run the command:
 
 ``` r
@@ -32,6 +32,28 @@ library(devtools)
 devtools::install_github('IMMM-SFA/gamut')
 library(gamut)
 ```
+
+If you run into problems with the remote installation, you may also try
+these other options to install gamut:
+
+1.  Save the package file by clicking
+    [here](https://api.github.com/repos/IMMM-SFA/gamut/tarball/HEAD),
+    then run `install_local()` as shown below:
+
+``` r
+install_local('path/to/package')
+```
+
+2.  Clone \[the repo\]\[repository\] to your computer using
+    `git clone "https://github.com/IMMM-SFA/gamut"`. You can then load
+    this project into your RStudio and install it.
+
+NOTE: Depending on your version of R, you may need to install Rtools to
+retrieve the package. If you have trouble installing it with
+`install.packages("Rtools")`, you can find the install file
+[here](https://cran.r-project.org/bin/windows/Rtools/). Depending on
+your version of `sf`, also may need to install the package `Rcpp` in
+order for `gamut` to build correctly.
 
 ##### Data Files
 
@@ -150,6 +172,14 @@ created through this function:
 | av\_ro\_max\_conc\_pct                | Max average runoff concentration                                                        | %                     |
 | surface\_contribution\_pct            | Surface contribution                                                                    | %                     |
 | importance\_of\_worst\_watershed\_pct | Measures the importance of the watershed with the worst contamination                   | %                     |
+
+### Dependencies
+
+`gamut` relies on functionality from the following R packages:
+clisymbols, crayon, dplyr, dams, exactextractr, foreign, geosphere,
+ggplot2, lwgeom, magrittr, purrr, raster, readxl, reservoir, rgdal,
+rgeos, sf, sp, spex, stringr, tibble, tidyr, vroom, testthat, knitr,
+rmarkdown, knitr.
 
 ## Support
 
