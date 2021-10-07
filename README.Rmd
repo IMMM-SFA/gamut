@@ -42,7 +42,7 @@ NOTE: Depending on your version of R, you may need to install Rtools to retrieve
 
 ##### Data Files
 
-To download all of the `gamut` input datasets, visit the [Zenodo data repository](https://zenodo.org/record/4662993#.YHTNpehKhPY) and download the zipped data files to your preferred directory. Make sure to combine the energy, land, misc, and water folders into a single directory. The table below shows all the files used within the `gamut` software package.
+To download all of the `gamut` input datasets, visit the [Zenodo data repository](https://zenodo.org/record/5554939#.YV9dnNrMJPY) and download the zipped data files to your preferred directory. Make sure to combine the energy, land, misc, and water folders into a single directory. The table below shows all the files used within the `gamut` software package.
     
 ```{r, echo=FALSE,message=FALSE}
 library(tibble)
