@@ -27,7 +27,7 @@ authors:
   affiliation: 1
 bibliography: paper.bib
 affiliations:
-- name: Pacific Northwest National Laboratory
+- name: Pacific Northwest National Laboratory, Richland, Washington, USA
   index: 1
 ---
 
