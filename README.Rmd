@@ -62,9 +62,9 @@ tribble(
   "climate","land","land/kop_climate_classes.tif","http://koeppen-geiger.vu-wien.ac.at/present.htm",
   "HUC4","water","water/USA_HUC4/huc4_to_huc2.shp","http://prd-tnm.s3-website-us-west-2.amazonaws.com/?prefix=StagedProducts/Hydrography/WBD/National/GDB/",
   "population","land","land/pden2010_block/pden2010_60m.tif","https://www.sciencebase.gov/catalog/item/57753ebee4b07dd077c70868",
-  "runoff","water","water/Historical_Mean_Runoff/USA_Mean_Runoff.tif","https://zenodo.org/record/4315195",
-  "nhd_flow","water","water/Watershed_Flow_Contributions/UWB_Intake_Flows.shp","https://zenodo.org/record/4315195",
-  "contributions","water","water/Watershed_Flow_Contributions/Watershed_Contributions.csv","https://zenodo.org/record/4315195"
+  "runoff","water","water/UWSCatCH/Historical_Mean_Runoff/USA_Mean_Runoff.tif","https://zenodo.org/record/4315195",
+  "nhd_flow","water","water/UWSCatCH/Watershed_Flow_Contributions/UWB_Intake_Flows.shp","https://zenodo.org/record/4315195",
+  "contributions","water","water/UWSCatCH/Watershed_Flow_Contributions/Watershed_Contributions.csv","https://zenodo.org/record/4315195"
 ) -> files
 
 kable(files)
