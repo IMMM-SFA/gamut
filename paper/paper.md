@@ -19,10 +19,10 @@ authors:
 - name: Sean W. Turner
   orcid: 0000-0003-4400-9800
   affiliation: 1
-- name: Chris Vernon
+- name: Chris R. Vernon
   orcid: 0000-0002-3406-6214
   affiliation: 1
-- name: Jennie Rice
+- name: Jennie S. Rice
   orcid: 0000-0002-7833-9456
   affiliation: 1
 bibliography: paper.bib
