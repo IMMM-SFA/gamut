@@ -31,7 +31,7 @@ library(gamut)
 
 If you run into problems with the remote installation, you may also try these other options to install gamut:
 
-1. Save the package file by clicking  [here](https://api.github.com/repos/IMMM-SFA/gamut/tarball/HEAD), then run `install_local()` as shown below:
+1. Save the package file by clicking [here](https://api.github.com/repos/IMMM-SFA/gamut/tarball/HEAD), then run `install_local()` as shown below:
 ```r
 install_local('path/to/package')
 ```
