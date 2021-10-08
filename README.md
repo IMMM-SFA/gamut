@@ -58,9 +58,11 @@ order for `gamut` to build correctly.
 ##### Data Files
 
 To download all of the `gamut` input datasets, visit the [Zenodo data
-repository](https://zenodo.org/record/4662993#.YHTNpehKhPY) and download
-the zipped data files to your preferred directory. The table below shows
-all the files used within the `gamut` software package.
+repository](https://zenodo.org/record/5554939#.YV9dnNrMJPY) and download
+the zipped data files to your preferred directory. Make sure to combine
+the energy, land, misc, and water folders into a single directory. The
+table below shows all the files used within the `gamut` software
+package.
 
 | gamut Name       | Sub Folder Location | Full File Path                                                                  | Data Source                                                                                              |
 |:-----------------|:--------------------|:--------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------|
@@ -76,9 +78,9 @@ all the files used within the `gamut` software package.
 | climate          | land                | land/kop\_climate\_classes.tif                                                  | <http://koeppen-geiger.vu-wien.ac.at/present.htm>                                                        |
 | HUC4             | water               | water/USA\_HUC4/huc4\_to\_huc2.shp                                              | <http://prd-tnm.s3-website-us-west-2.amazonaws.com/?prefix=StagedProducts/Hydrography/WBD/National/GDB/> |
 | population       | land                | land/pden2010\_block/pden2010\_60m.tif                                          | <https://www.sciencebase.gov/catalog/item/57753ebee4b07dd077c70868>                                      |
-| runoff           | water               | water/Historical\_Mean\_Runoff/USA\_Mean\_Runoff.tif                            | <https://zenodo.org/record/4315195>                                                                      |
-| nhd\_flow        | water               | water/Watershed\_Flow\_Contributions/UWB\_Intake\_Flows.shp                     | <https://zenodo.org/record/4315195>                                                                      |
-| contributions    | water               | water/Watershed\_Flow\_Contributions/Watershed\_Contributions.csv               | <https://zenodo.org/record/4315195>                                                                      |
+| runoff           | water               | water/UWSCatCH/Historical\_Mean\_Runoff/USA\_Mean\_Runoff.tif                   | <https://zenodo.org/record/4315195>                                                                      |
+| nhd\_flow        | water               | water/UWSCatCH/Watershed\_Flow\_Contributions/UWB\_Intake\_Flows.shp            | <https://zenodo.org/record/4315195>                                                                      |
+| contributions    | water               | water/UWSCatCH/Watershed\_Flow\_Contributions/Watershed\_Contributions.csv      | <https://zenodo.org/record/4315195>                                                                      |
 
 ## Usage
 
@@ -119,59 +121,59 @@ cities’ watersheds.
 The table below shows explanations for each of these variables that are
 created through this function:
 
-| Variable Name                         | Description                                                                             | Units                 |
-|:--------------------------------------|:----------------------------------------------------------------------------------------|:----------------------|
-| city\_population                      | The population of the city being analyzed                                               | people                |
-| n\_watersheds                         | Number of watersheds that city uses to source drinking water                            | watersheds            |
-| n\_other\_cities                      | Number of other cities pulling off the same watersheds                                  | cities                |
-| dependent\_city\_pop                  | Total population of people dependent on that city’s watersheds                          | people                |
-| watershed\_area\_sqkm                 | Combined area of all the source watersheds of a city                                    | square kilometers     |
-| storage\_BCM                          | Combined storage capacity of all the city catchments                                    | billion cubic meters  |
-| yield\_BCM                            | Combined yield capacity of all the city catchments                                      | billion cubic meters  |
-| irr\_cons\_BCM                        | Combined water consumption that is used for irrigation with the watersheds              | billion cubic meters  |
-| n\_climate\_zones                     | Number of climate zones that the source watersheds cover                                | zones                 |
-| n\_hydro\_plants                      | Number of hydro electric power plants operating within the source watersheds            | plants                |
-| n\_thermal\_plants                    | Number of thermal power plants operating within the source watersheds                   | plants                |
-| n\_fac\_agcrop                        | Number of agricultural crop facilities within the source watersheds                     | facilities            |
-| n\_fac\_aglivestock                   | Number of agicultural livestock facilities within the source watersheds                 | facilities            |
-| n\_fac\_cnsmnf                        | Number of construction and manufacturing facilities within the source watersheds        | facilities            |
-| n\_fac\_mining                        | Number of mining facilities within the source watersheds                                | facilities            |
-| n\_fac\_oilgas                        | Number of oil and gas facilities within the source watersheds                           | facilities            |
-| n\_fac\_total                         | Total number of facilities operating within the source watersheds                       | facilities            |
-| hydro\_gen\_MWh                       | Combined hydro electric generation from all the facilities within the source watersheds | megawatt-hours        |
-| thermal\_gen\_MWh                     | Combined thermal generation from all the facilities within the source watersheds        | megawatt-hours        |
-| thermal\_cons\_BCM                    | Combined water consumption that is used for thermal generation                          | billion cubic meters  |
-| thermal\_with\_BCM                    | Combined water withdrawal for thermal generation                                        | billion cubic meters  |
-| n\_utilities                          | Number of electric utilities within the source watersheds                               | utilities             |
-| n\_ba                                 | Number of balancing authorities within the source watersheds                            | balancing authorities |
-| n\_crop\_classes                      | Total number of different types of crops within the source watersheds                   | crops                 |
-| cropland\_fraction                    | Fraction of land that is used for crops within the source watersheds                    | fraction              |
-| developed\_fraction                   | Fraction of land that is developed within the source watersheds                         | fraction              |
-| ag\_runoff\_max                       | Max amount of agricultural runoff within the source watersheds                          | fraction              |
-| ag\_runoff\_av\_exgw                  | Average agricultural runoff (excluding ground water)                                    | fraction              |
-| ag\_runoff\_av                        | Average runoff from agricultural lands                                                  | fraction              |
-| dev\_runof\_max                       | Max amount of agricultural runoff within the source watersheds                          | fraction              |
-| dev\_runof\_av\_exgw                  | Average developed runoff (excluding ground water)                                       | fraction              |
-| dev\_runof\_av                        | Average runoff from developed lands                                                     | fraction              |
-| np\_runoff\_max                       | Max amount of non-point source runoff within the source watersheds                      | fraction              |
-| np\_runoff\_av\_exgw                  | Average non-point runoff (excluding ground water)                                       | fraction              |
-| np\_runoff\_av\_exgw\_unweighted      | Average non-point runoff unweighted (excluding ground water)                            | fraction              |
-| np\_runoff\_av                        | Average non-point source runoff.                                                        | fraction              |
-| n\_economic\_sectors                  | Total number of different economic sectors within the source watersheds                 | sectors               |
-| max\_withdr\_dis\_km                  | Maximum distance between a city’s intake points                                         | kilometers            |
-| avg\_withdr\_dis\_km                  | Average distance between a city’s intake points                                         | kilometers            |
-| n\_treatment\_plants                  | Total number of waste water treatment plants operating within the source watersheds     | plants                |
-| watershed\_pop                        | Total number of people living within the source watershed boundaries                    | people                |
-| pop\_cons\_m3sec                      | Combined water consumption from the source watersheds that is used for people           | m3/sec                |
-| av\_fl\_sur\_conc\_pct                | Average surface flow concentration                                                      | %                     |
-| av\_fl\_sur\_conc\_pct\_unweighted    | Average surface flow concentration unweighted                                           | %                     |
-| av\_ro\_sur\_conc\_pct                | Average surface runoff concentration                                                    | %                     |
-| av\_fl\_all\_conc\_pct                | Average flow concentration                                                              | %                     |
-| av\_ro\_all\_conc\_pct                | Average runoff concentration                                                            | %                     |
-| av\_fl\_max\_conc\_pct                | Max average flow concentration                                                          | %                     |
-| av\_ro\_max\_conc\_pct                | Max average runoff concentration                                                        | %                     |
-| surface\_contribution\_pct            | Surface contribution                                                                    | %                     |
-| importance\_of\_worst\_watershed\_pct | Measures the importance of the watershed with the worst contamination                   | %                     |
+| Variable Name                         | Description                                                                            | Units                 |
+|:--------------------------------------|:---------------------------------------------------------------------------------------|:----------------------|
+| city\_population                      | The population of the city being analyzed                                              | people                |
+| n\_watersheds                         | Number of watersheds that city uses to source drinking water                           | watersheds            |
+| n\_other\_cities                      | Number of other cities pulling off the same watersheds                                 | cities                |
+| dependent\_city\_pop                  | Total population of people dependent on that city’s watersheds                         | people                |
+| watershed\_area\_sqkm                 | Combined area of all the source watersheds of a city                                   | square kilometers     |
+| storage\_BCM                          | Combined storage capacity of all the city catchments                                   | billion cubic meters  |
+| yield\_BCM                            | Combined yield capacity of all the city catchments                                     | billion cubic meters  |
+| irr\_cons\_BCM                        | Combined water consumption that is used for irrigation with the watersheds             | billion cubic meters  |
+| n\_climate\_zones                     | Number of climate zones that the source watersheds cover                               | zones                 |
+| n\_hydro\_plants                      | Number of hydroelectric power plants operating within the source watersheds            | plants                |
+| n\_thermal\_plants                    | Number of thermal power plants operating within the source watersheds                  | plants                |
+| n\_fac\_agcrop                        | Number of agricultural crop facilities within the source watersheds                    | facilities            |
+| n\_fac\_aglivestock                   | Number of agicultural livestock facilities within the source watersheds                | facilities            |
+| n\_fac\_cnsmnf                        | Number of construction and manufacturing facilities within the source watersheds       | facilities            |
+| n\_fac\_mining                        | Number of mining facilities within the source watersheds                               | facilities            |
+| n\_fac\_oilgas                        | Number of oil and gas facilities within the source watersheds                          | facilities            |
+| n\_fac\_total                         | Total number of facilities operating within the source watersheds                      | facilities            |
+| hydro\_gen\_MWh                       | Combined hydroelectric generation from all the facilities within the source watersheds | megawatt-hours        |
+| thermal\_gen\_MWh                     | Combined thermal generation from all the facilities within the source watersheds       | megawatt-hours        |
+| thermal\_cons\_BCM                    | Combined water consumption that is used for thermal generation                         | billion cubic meters  |
+| thermal\_with\_BCM                    | Combined water withdrawal for thermal generation                                       | billion cubic meters  |
+| n\_utilities                          | Number of electric utilities within the source watersheds                              | utilities             |
+| n\_ba                                 | Number of balancing authorities within the source watersheds                           | balancing authorities |
+| n\_crop\_classes                      | Total number of different types of crops within the source watersheds                  | crops                 |
+| cropland\_fraction                    | Fraction of land that is used for crops within the source watersheds                   | fraction              |
+| developed\_fraction                   | Fraction of land that is developed within the source watersheds                        | fraction              |
+| ag\_runoff\_max                       | Max amount of agricultural runoff within the source watersheds                         | fraction              |
+| ag\_runoff\_av\_exgw                  | Average agricultural runoff (excluding ground water)                                   | fraction              |
+| ag\_runoff\_av                        | Average runoff from agricultural lands                                                 | fraction              |
+| dev\_runof\_max                       | Max amount of agricultural runoff within the source watersheds                         | fraction              |
+| dev\_runof\_av\_exgw                  | Average developed runoff (excluding ground water)                                      | fraction              |
+| dev\_runof\_av                        | Average runoff from developed lands                                                    | fraction              |
+| np\_runoff\_max                       | Max amount of non-point source runoff within the source watersheds                     | fraction              |
+| np\_runoff\_av\_exgw                  | Average non-point runoff (excluding ground water)                                      | fraction              |
+| np\_runoff\_av\_exgw\_unweighted      | Average non-point runoff unweighted (excluding ground water)                           | fraction              |
+| np\_runoff\_av                        | Average non-point source runoff.                                                       | fraction              |
+| n\_economic\_sectors                  | Total number of different economic sectors within the source watersheds                | sectors               |
+| max\_withdr\_dis\_km                  | Maximum distance between a city’s intake points                                        | kilometers            |
+| avg\_withdr\_dis\_km                  | Average distance between a city’s intake points                                        | kilometers            |
+| n\_treatment\_plants                  | Total number of waste water treatment plants operating within the source watersheds    | plants                |
+| watershed\_pop                        | Total number of people living within the source watershed boundaries                   | people                |
+| pop\_cons\_m3sec                      | Combined water consumption from the source watersheds that is used for people          | m3/sec                |
+| av\_fl\_sur\_conc\_pct                | Average surface flow concentration                                                     | %                     |
+| av\_fl\_sur\_conc\_pct\_unweighted    | Average surface flow concentration unweighted                                          | %                     |
+| av\_ro\_sur\_conc\_pct                | Average surface runoff concentration                                                   | %                     |
+| av\_fl\_all\_conc\_pct                | Average flow concentration                                                             | %                     |
+| av\_ro\_all\_conc\_pct                | Average runoff concentration                                                           | %                     |
+| av\_fl\_max\_conc\_pct                | Max average flow concentration                                                         | %                     |
+| av\_ro\_max\_conc\_pct                | Max average runoff concentration                                                       | %                     |
+| surface\_contribution\_pct            | Surface contribution                                                                   | %                     |
+| importance\_of\_worst\_watershed\_pct | Measures the importance of the watershed with the worst contamination                  | %                     |
 
 ### Dependencies
 
