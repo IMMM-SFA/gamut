@@ -30,7 +30,7 @@ jobs:
       - name: Install dependencies
         env:
           R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
-        run: Rscript -e "install.packages(c('remotes', 'rcmdcheck', 'covr', 'pkgdown'))" -e "remotes::install_deps(dependencies = TRUE)" |
+        run: Rscript -e "install.packages(c('remotes', 'rcmdcheck', 'covr', 'pkgdown'))" -e "remotes::install_deps(dependencies = TRUE)" 
 
       - name: Install package
         run: R CMD INSTALL .
