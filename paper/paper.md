@@ -54,7 +54,7 @@ Table 1: Metrics reported in `gamut`
 | yield\_BCM                            | Combined yield capacity of all the city catchments                                      | billion cubic meters  |
 | irr\_cons\_BCM                        | Combined water consumption that is used for irrigation with the watersheds              | billion cubic meters  |
 | n\_climate\_zones                     | Number of climate zones that the source watersheds cover                                | zones                 |
-| n\_hydro\_plants                      | Number of hydro electric power plants operating within the source watersheds            | plants                |
+| n\_hydro\_plants                      | Number of hydroelectric power plants operating within the source watersheds            | plants                |
 | n\_thermal\_plants                    | Number of thermal power plants operating within the source watersheds                   | plants                |
 | n\_fac\_agcrop                        | Number of agricultural crop facilities within the source watersheds                     | facilities            |
 | n\_fac\_aglivestock                   | Number of agicultural livestock facilities within the source watersheds                 | facilities            |
@@ -62,7 +62,7 @@ Table 1: Metrics reported in `gamut`
 | n\_fac\_mining                        | Number of mining facilities within the source watersheds                                | facilities            |
 | n\_fac\_oilgas                        | Number of oil and gas facilities within the source watersheds                           | facilities            |
 | n\_fac\_total                         | Total number of facilities operating within the source watersheds                       | facilities            |
-| hydro\_gen\_MWh                       | Combined hydro electric generation from all the facilities within the source watersheds | megawatt-hours         |
+| hydro\_gen\_MWh                       | Combined hydroelectric generation from all the facilities within the source watersheds | megawatt-hours         |
 | thermal\_gen\_MWh                     | Combined thermal generation from all the facilities within the source watersheds        | megawatt-hours         |
 | thermal\_cons\_BCM                    | Combined water consumption that is used for thermal generation                          | billion cubic meters  |
 | thermal\_with\_BCM                    | Combined water withdrawal for thermal generation                                        | billion cubic meters  |
