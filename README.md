@@ -18,7 +18,8 @@ correlation between human and environmental phenomena that occur a long
 distance apart.
 
 <p align="center">
-<img width="800" height="550" src="inst/extdata/gamut_plot.png">
+&lt;a
+<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_plot.png?raw=true" width="800" height="550"></a>
 </p>
 
 ## Get Started with `gamut`
@@ -116,7 +117,10 @@ This table can be used to compare different variables between multiple
 cities. Below is a graph comparing how much developed land are in
 cities’ watersheds.
 
-![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
+<p align="center">
+&lt;a
+<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_graph.png?raw=true" ></a>
+</p>
 
 The table below shows explanations for each of these variables that are
 created through this function:
