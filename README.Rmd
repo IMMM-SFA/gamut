@@ -40,7 +40,7 @@ install_local('path/to/package')
 
 NOTE: Depending on your version of R, you may need to install Rtools to retrieve the package. If you have trouble installing it with `install.packages("Rtools")`, you can find the install file [here](https://cran.r-project.org/bin/windows/Rtools/). Depending on your version of `sf`, also may need to install the package `Rcpp` in order for `gamut` to build correctly. 
 
-##### Data Files
+## Data Files
 
 To download all of the `gamut` input datasets, visit the [Zenodo data repository](https://zenodo.org/record/5554939#.YV9dnNrMJPY) and download the zipped data files to your preferred directory. Make sure to combine the energy, land, misc, and water folders into a single directory. The table below shows all the files used within the `gamut` software package.
     

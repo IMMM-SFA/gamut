@@ -55,7 +55,7 @@ retrieve the package. If you have trouble installing it with
 your version of `sf`, also may need to install the package `Rcpp` in
 order for `gamut` to build correctly.
 
-##### Data Files
+## Data Files
 
 To download all of the `gamut` input datasets, visit the [Zenodo data
 repository](https://zenodo.org/record/5554939#.YV9dnNrMJPY) and download
