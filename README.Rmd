@@ -17,8 +17,7 @@ always_allow_html: yes
 
 
 <p align="center">
-<a
-<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_plot.png?raw=true" width="800" height="550"></a> 
+<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_plot.png?raw=true" width="800" height="550"> 
 </p>
 
 ## Get Started with `gamut`
@@ -93,8 +92,7 @@ knitr::kable(results)
 This table can be used to compare different variables between multiple cities. Below is a graph comparing how much developed land are in cities' watersheds. 
 
 <p align="center">
-<a
-<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_graph.png?raw=true" ></a> 
+<img src="https://github.com/IMMM-SFA/gamut/blob/dev/inst/extdata/gamut_graph.png?raw=true" width = "650" height="500" >
 </p>
 
 

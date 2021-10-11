@@ -18,8 +18,7 @@ correlation between human and environmental phenomena that occur a long
 distance apart.
 
 <p align="center">
-&lt;a
-<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_plot.png?raw=true" width="800" height="550"></a>
+<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_plot.png?raw=true" width="800" height="550">
 </p>
 
 ## Get Started with `gamut`
@@ -118,8 +117,7 @@ cities. Below is a graph comparing how much developed land are in
 cities’ watersheds.
 
 <p align="center">
-&lt;a
-<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_graph.png?raw=true" ></a>
+<img src="https://github.com/IMMM-SFA/gamut/blob/dev/inst/extdata/gamut_graph.png?raw=true" width = "650" height="500" >
 </p>
 
 The table below shows explanations for each of these variables that are
