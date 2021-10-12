@@ -117,7 +117,7 @@ cities. Below is a graph comparing how much developed land are in
 cities’ watersheds.
 
 <p align="center">
-<img src="https://github.com/IMMM-SFA/gamut/blob/dev/inst/extdata/gamut_graph.png?raw=true" width = "650" height="500" >
+<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_graph.png?raw=true" width = "650" height="500" >
 </p>
 
 The table below shows explanations for each of these variables that are
