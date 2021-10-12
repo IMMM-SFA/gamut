@@ -21,7 +21,7 @@ import_shapefile <- function(shp_path, quiet = TRUE, method = "sf") {
 
 #' Create a raster object from a file path
 #'
-#' @detials Create a raster object from a full path to raster file name and extension
+#' @details Create a raster object from a full path to raster file name and extension
 #'
 #' @param raster_path character. A full path to the input raster file with file name and extension
 #' @return raster object
