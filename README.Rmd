@@ -92,7 +92,7 @@ knitr::kable(results)
 This table can be used to compare different variables between multiple cities. Below is a graph comparing how much developed land are in cities' watersheds. 
 
 <p align="center">
-<img src="https://github.com/IMMM-SFA/gamut/blob/dev/inst/extdata/gamut_graph.png?raw=true" width = "650" height="500" >
+<img src="https://github.com/IMMM-SFA/gamut/blob/main/inst/extdata/gamut_graph.png?raw=true" width = "650" height="500" >
 </p>
 
 
