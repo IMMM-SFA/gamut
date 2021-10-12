@@ -27,7 +27,7 @@ get_runoff_values(
 get_runoff_values
 }
 \details{
-calculate runoff volume in meters cubed per second
+This function calculates runoff volume in meters cubed per second for different land covers across the CONUS.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

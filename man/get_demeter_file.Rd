@@ -13,7 +13,7 @@ get_demeter_file(irrigation_file_path)
 get_demeter_file
 }
 \details{
-Load demeter file for irrigation and rainfed crop data
+This function loads in the demeter file for irrigation and rainfed crop data
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

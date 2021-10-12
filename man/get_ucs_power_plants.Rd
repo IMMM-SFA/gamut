@@ -12,7 +12,10 @@ get_ucs_power_plants(ucs_file_path, method = "sp")
 \item{method}{tool used to convert to spatial data; either 'sp' or 'sf'}
 }
 \description{
-Read the UCS database
+get_ucs_power_plants
+}
+\details{
+This function reads the UCS power plant database
 }
 \author{
 Sean Turner (sean.turner@pnnl.gov)

@@ -7,6 +7,9 @@
 get_crop_mapping()
 }
 \description{
+get_crop_mapping
+}
+\details{
 Read internal data file that specifies the GCAM classification for certain crop types.
 }
 \author{

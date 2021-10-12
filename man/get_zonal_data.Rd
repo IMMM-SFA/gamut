@@ -15,8 +15,10 @@ get_zonal_data(raster_object, polygon)
 table of crop types present and their coverage within the polygon area
 }
 \description{
-Get the coverage per class of raster values represented in the input raster dataset
-when restricted to the input watershed polygons for a target city.
+Get raster frequency per class from polygon input areas
+}
+\details{
+Get the coverage per class of raster values represented in the input raster dataset when restricted to the input watershed polygons for a target city.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

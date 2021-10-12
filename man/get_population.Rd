@@ -10,7 +10,7 @@ get_population()
 get_population
 }
 \details{
-Census populations
+This function loads in US Census population data for the cities in gamut.
 }
 \author{
 Sean Turner (sean.turner@pnnl.gov)

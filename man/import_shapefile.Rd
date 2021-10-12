@@ -17,6 +17,9 @@ import_shapefile(shp_path, quiet = TRUE, method = "sf")
 sf object
 }
 \description{
+Create an sf object from a shapefile
+}
+\details{
 Create an sf object from a full path to shapefile with file name and extension
 }
 \author{

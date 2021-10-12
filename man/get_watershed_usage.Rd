@@ -13,7 +13,7 @@ get_watershed_usage(city)
 get_watershed_usage
 }
 \details{
-load in watershed usage table
+This function loads in the watershed usage table which provides information on how much a city uses a certain watershed.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

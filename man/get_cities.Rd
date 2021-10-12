@@ -7,8 +7,10 @@
 get_cities()
 }
 \description{
-Read internal data file that specifies all 236 US cities from UWB database.
-Provides consistent mapping across cities, intakes and watersheds.
+get_cities
+}
+\details{
+Read internal data file that specifies all 236 US cities from UWB database. Provides consistent mapping across cities, intakes and watersheds.
 }
 \author{
 Sean Turner (sean.turner@pnnl.gov)

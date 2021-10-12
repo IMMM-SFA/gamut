@@ -10,7 +10,7 @@ get_epa_facilities()
 get_epa_facilities
 }
 \details{
-import EPA facilities data
+This function imports EPA facilities data which has data on facility location and type. The function takes SIC codes and reclassifies them to new categories.
 }
 \author{
 Sean Turner (sean.turner@pnnl.gov)

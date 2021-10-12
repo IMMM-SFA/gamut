@@ -10,7 +10,7 @@ get_irrigation_bcm()
 get_irrigation_bcm
 }
 \details{
-load in irrigation bcm file path
+This function loads in HUC2 irrigation data in billion cubic meters.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

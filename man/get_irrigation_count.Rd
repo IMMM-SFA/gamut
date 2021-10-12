@@ -13,7 +13,7 @@ get_irrigation_count(irrigation_city)
 get_irrigation_count
 }
 \details{
-Count irrigated crops vs rainfed crops and determine irrigation status
+This function counts irrigated crops vs rainfed crops and determines irrigation status
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

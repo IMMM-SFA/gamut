@@ -15,7 +15,7 @@ get_source_contribution(data_dir, file_paths)
 get_source_contribution
 }
 \details{
-get a city's water source contribution breakdown
+This function gets a city's water source contribution breakdown. This data is from the UWSCatCH dataset.
 }
 \author{
 Sean Turner (sean.turner@pnnl.gov)

@@ -15,7 +15,7 @@ get_hydro_dataset(data_dir, hydro_file_path)
 get_hydro_dataset
 }
 \details{
-Load in nlud_id_table.csv and merge with the economic_ids to get class names
+This function loads in a hydro power plant dataset and filters out the necessary columns for the package.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)
