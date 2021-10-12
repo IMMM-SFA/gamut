@@ -3,16 +3,16 @@ Type: Package
 Title: Geospatial Analytics for Multisector Urban Teleconnections
 Version: 1.0.0
 Authors@R: 
-    person(given = "Sean",
-           family = "Turner",
-           role = c("aut", "cre"),
-           email = "sean.turner@pnnl.gov",
-           comment = c(ORCID = "0000-0003-4400-9800"))
     person(given = "Kristian",
            family = "Nelson",
            role = c("aut", "cre"),
            email = "kristian.nelson@pnnl.gov",
            comment = c(ORCID = "0000-0002-6745-167X"))
+    person(given = "Sean",
+           family = "Turner",
+           role = c("aut", "cre"),
+           email = "sean.turner@pnnl.gov",
+           comment = c(ORCID = "0000-0003-4400-9800"))
     person(given = "Chris",
            family = "Vernon",
            role = c("aut", "cre"),
