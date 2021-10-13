@@ -116,9 +116,9 @@ library(gamut)
 ### Dependencies
 
 `gamut` relies on functionality from the following R packages:
-    clisymbols [@Csardi:2017],
+    clisymbols [@Csardi2:2017],
     crayon [@Csardi:2017],
-    dplyr [@Henry:2020],
+    dplyr [@Henry2:2020],
     dams [@Goteti:2020],
     exactextractr [@Baston:2020],
     foreign [@R-Core-Team:2020],
@@ -130,14 +130,14 @@ library(gamut)
     raster [@Hijmans:2020],
     readxl [@Wickham:2019],
     reservoir [@Turner:2016],
-    rgdal [@Bivand:2020],
+    rgdal [@Bivand2:2020],
     rgeos [@Bivand:2020],
     sf [@Pebesma:2018],
     sp [@Bivand:2013],
     spex [@Sumner:2020],
     stringr [@Wickham:2019],
     tibble [@Muller:2020],
-    tidyr [@Wickham:2020],
+    tidyr [@Wickham2:2020],
     vroom [@Hester:2021],
     testthat [@Wickham:2011],
     rmarkdown [@Xie:2018],
