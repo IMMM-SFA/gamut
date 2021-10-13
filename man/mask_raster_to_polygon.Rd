@@ -15,7 +15,7 @@ mask_raster_to_polygon(raster_object, polygon)
 Mask raster to polygon
 }
 \details{
-masks a raster file against a chosen polygon.
+This function masks a raster file against a chosen polygon. This function differs from a normal mask because it makes sure the projections are the same for both layers.
 }
 \author{
 Sean Turner (sean.turner@pnnl.gov)

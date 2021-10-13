@@ -13,6 +13,9 @@ import_raster(raster_path)
 raster object
 }
 \description{
+Create a raster object from a file path
+}
+\details{
 Create a raster object from a full path to raster file name and extension
 }
 \author{

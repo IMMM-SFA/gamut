@@ -13,7 +13,7 @@ get_nlud_names(economic_ids)
 get_nlud_names
 }
 \details{
-Load in nlud_id_table.csv and merge with the economic_ids to get class names
+This function loads in the National Land Use Dataset IDs and merges it with the economic_ids to get class names
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

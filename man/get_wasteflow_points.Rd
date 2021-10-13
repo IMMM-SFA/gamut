@@ -10,7 +10,7 @@ get_wasteflow_points()
 get_wasteflow_points
 }
 \details{
-load in waste flow table and converts to Spatial Point Dataframe
+This function loads in a waste flow table and converts to Spatial Point Dataframe.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

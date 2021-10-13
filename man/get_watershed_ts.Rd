@@ -13,7 +13,7 @@ get_watershed_ts(watersheds)
 get_watershed_ts
 }
 \details{
-Load in runoff time series and select the watershed being analyzed and its time series
+This function loads in runoff time series and selects the watershed being analyzed and its time series. This information is used in the yield analysis.
 }
 \author{
 Kristian Nelson (kristian.nelson@pnnl.gov)

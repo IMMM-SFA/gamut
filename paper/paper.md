@@ -1,42 +1,45 @@
 ---
-title: 'gamut: A Geospatial Analysis of Multisector Urban Teleconnections'
+title: 'gamut: A Geospatial R Package to Analyze Multisectoral Urban Teleconnections'
 tags:
-  - R
-  - Multisector Dynamics
-  - Water
-  - Energy
-  - Land
-  - Urban
-  - Geospatial
+- R
+- Multisector Dynamics
+- Water
+- Energy
+- Land
+- Urban
+- Geospatial
+date: "30 September 2021"
+output:
+  html_document: 
+    df_print: paged
 authors:
-  - name: Kristian D. Nelson
-    orcid: 0000-0002-6745-167X
-    affiliation: 1
-  - name: Sean W. Turner
-    orcid: 0000-0003-4400-9800
-    affiliation: 1
-  - name: Chris Vernon
-    orcid: 0000-0002-3406-6214
-    affiliation: 1
-  - name: Jennie Rice
-    orcid: 0000-0002-7833-9456
-    affiliation: 1
-affiliations:
- - name: Pacific Northwest National Laboratory
-   index: 1
-date: 26 April 2020
+- name: Kristian D. Nelson
+  orcid: 0000-0002-6745-167X
+  affiliation: 1
+- name: Sean W. Turner
+  orcid: 0000-0003-4400-9800
+  affiliation: 1
+- name: Chris R. Vernon
+  orcid: 0000-0002-3406-6214
+  affiliation: 1
+- name: Jennie S. Rice
+  orcid: 0000-0002-7833-9456
+  affiliation: 1
 bibliography: paper.bib
+affiliations:
+- name: Pacific Northwest National Laboratory, Richland, Washington, USA
+  index: 1
 ---
 
 ### Summary
 
-Most cities in the United States withdraw surface water to meet public water supply needs. The lands on which this water is generated are often developed for human activities&mdash;such as agriculture, mining, and industry&mdash;that may compete for water resources or contaminate water supplies. Cities are thereby connected to other sectors through their water supply catchments. This connection is an example of an multisectoral urban teleconnection. The Geospatial Analytics for Multisectoral Urban Teleconnections (`gamut`) package provides national-scale information on these teleconnections by combining land use data with hydrological analysis to characterize urban source watershed human interactions across the conterminous United States (Figure 1).
+Most cities in the United States withdraw surface water to meet public water supply needs. The lands on which this water is generated are often developed for human activities&mdash;such as agriculture, mining, and industry&mdash;that may compete for water resources or contaminate water supplies. Cities are thereby connected to other sectors through their water supply catchments. These connections are an example of a multisectoral urban teleconnection, or interdependency to a geographically disparate region from a source region where events in one (e.g., land use changes) often impact the other [@Seto:2012]. This term was brought about to bring greater understanding of the connections between urbanization and land use changes [@Seto:2012]. The Geospatial Analytics for Multisectoral Urban Teleconnections (`gamut`) package provides national-scale information on these urban teleconnections for 235 cities by combining land use data with hydrological analysis to characterize urban source watershed human interactions across the conterminous United States (Figure 1).
 
-![The `gamut` package analyzes urban cities and their watersheds all across the conterminous U.S. As shown in the figure, it can look at characteristics like land use and facility operations inside watershed boundaries.](gamut_figure.png){ width=95% }
+![The `gamut` package analyzes urban cities and their watersheds all across the conterminous U.S. As shown in the figure, it can look at characteristics like land use inside watershed boundaries.](gamut_figure.png){ width=95% }
 
-The `gamut` package computes dozens of city-level metrics that inform on the geographical nature of surface water supply catchments and the presence, intensity, and impact of human activities in those catchments. Each city’s watersheds are based on the Urban Water Blueprint [@McDonald:2014], which is enhanced with source contribution estimates as well as river flow and high-resolution runoff [@Nelson:2021]. Watershed delineations are used to mask several geospatial land use layers relating to electricity generation, agriculture, industry and other economic developments, and water infrastructure (dams, reservoirs, aqueducts). These geospatial input layers have been combined into an open-source dataset and can accessed [here](https://zenodo.org/record/4662993#.YJB9ZLVKhPY) [@Nelson2:2021].
+The `gamut` package computes dozens of city-level metrics that inform on the geographical nature of surface water supply catchments and the presence, intensity, and impact of human activities in those catchments. The package cycles through a 3-step process. First, it connects cities to there drinking water resources by using the Urban Water Blueprint dataset [@McDonald:2014]. This dataset is combined with an enhancment dataset of source contribution estimates as well as river flow and high-resolution runoff [@Nelson:2021]. After connecting the cities to the watersheds, the second step is using the watershed boundary as a mask for the input geospatial layers. Additionally, `gamut` relies heavily on the use of the `st_intersection` function from the [sf](https://cran.r-project.org/web/packages/sf/index.html) package to intersect features and watersheds, which joins the information from the geospatial layers. These layers encompass a wide variety of characteristics including land use, land cover, power generation, infrastructure, hydrological data (irrigation, stream flow, runoff), and population data. Similar to other multisector packages, `gamut` produces new data from a combination of multiple datasets, which are then used to create new statistics.  Non-geospatial layers in the form of data tables are joined through city names and municipal IDs. The input layers used in this package have been combined into an open-source dataset and can accessed [here](https://zenodo.org/record/5554939#.YV9dnNrMJPY) [@Nelson2:2021]. The last step in the process is the creation of output metrics, which is done through the calculation of statistics based on the masked input data for each city.
 
-Metrics reported by `gamut` fall into four main categories: geographical characteristics of watersheds (e.g., climate zones, land area, distance from city, hydrology), potential water contamination concentrations (nonpoint and point), withdrawal/consumption of water from other sectors, and presence/intensity of multisectoral land uses. Table 1 shows all of the metrics that are created by this package, descriptions, and units. An R vignette is provided to help users to get started with `gamut` and may be accessed [here](https://github.com/IMMM-SFA/gamut#readme).
+By creating the links between cities and watershed characteristics, the `gamut` package calculates numerous metrics that may be used for multiple types of city level multisector dynamics research. Metrics reported by `gamut` fall into four main categories: geographical characteristics of watersheds (e.g., climate zones, land area, distance from city, hydrology), potential water contamination concentrations (nonpoint and point), withdrawal/consumption of water from other sectors, and presence/intensity of multisectoral land uses. Table 1 shows all of the metrics that are created by this package, descriptions, and units. An R vignette is provided to help users to get started with `gamut` and may be accessed [here](https://immm-sfa.github.io/gamut/).
 
 Table 1: Metrics reported in `gamut`
 
@@ -51,7 +54,7 @@ Table 1: Metrics reported in `gamut`
 | yield\_BCM                            | Combined yield capacity of all the city catchments                                      | billion cubic meters  |
 | irr\_cons\_BCM                        | Combined water consumption that is used for irrigation with the watersheds              | billion cubic meters  |
 | n\_climate\_zones                     | Number of climate zones that the source watersheds cover                                | zones                 |
-| n\_hydro\_plants                      | Number of hydro electric power plants operating within the source watersheds            | plants                |
+| n\_hydro\_plants                      | Number of hydroelectric power plants operating within the source watersheds            | plants                |
 | n\_thermal\_plants                    | Number of thermal power plants operating within the source watersheds                   | plants                |
 | n\_fac\_agcrop                        | Number of agricultural crop facilities within the source watersheds                     | facilities            |
 | n\_fac\_aglivestock                   | Number of agicultural livestock facilities within the source watersheds                 | facilities            |
@@ -59,7 +62,7 @@ Table 1: Metrics reported in `gamut`
 | n\_fac\_mining                        | Number of mining facilities within the source watersheds                                | facilities            |
 | n\_fac\_oilgas                        | Number of oil and gas facilities within the source watersheds                           | facilities            |
 | n\_fac\_total                         | Total number of facilities operating within the source watersheds                       | facilities            |
-| hydro\_gen\_MWh                       | Combined hydro electric generation from all the facilities within the source watersheds | megawatt-hours         |
+| hydro\_gen\_MWh                       | Combined hydroelectric generation from all the facilities within the source watersheds | megawatt-hours         |
 | thermal\_gen\_MWh                     | Combined thermal generation from all the facilities within the source watersheds        | megawatt-hours         |
 | thermal\_cons\_BCM                    | Combined water consumption that is used for thermal generation                          | billion cubic meters  |
 | thermal\_with\_BCM                    | Combined water withdrawal for thermal generation                                        | billion cubic meters  |
@@ -97,11 +100,18 @@ Table 1: Metrics reported in `gamut`
 
 ### Statement of Need
 
-MultiSector Dynamics (MSD) research  is the study of the co-evolution of human and natural systems. This research requires infrastructure expansion and land use scenarios, resource demand projections, and multisectoral modeling to capture the impacts of trends and shocks on human systems. The `gamut` package offers new data that meet a number of MSD needs. The package may be used to infer possible water resources expansion strategies for major cities in the United States. For example, cities found to be heavily exposed to potential contamination may be more likely to seek alternative means of supply (e.g., water transfers) or invest in water reuse facilities. `gamut` also reveals which source watersheds are heavily protected by receiving cites. This information can inform land use and energy expansion scenarios applied in MSD research, for example by preventing significant expansion of human developments in protected source watersheds. `gamut` may also be used in large-scale hydrological modeling to correctly assign urban water demands to specific intakes. `gamut` also provides a range of new data that can inform urban residents on the origins of their water supply.
+Multisector Dynamics (MSD) research  is the study of the co-evolution of human and natural systems. This research requires infrastructure expansion and land use scenarios, resource demand projections, and multisectoral modeling to capture the impacts of trends and shocks on human systems. The `gamut` package offers new data that meet a number of MSD needs. The package may be used to infer possible water resources expansion strategies for major cities in the United States. For example, cities found to be heavily exposed to potential contamination may be more likely to seek alternative means of supply (e.g., water transfers) or invest in water reuse facilities. In a study by Rice et. al (2013) which looked at de facto wastewater reuse across the US, it was found that there had been an increase in wastewater concentrations in drinking water treatment plants from a 1980 EPA report, especially at low flow conditions [@Rice:2013]. The `gamut` package has the ability to look at wastewater discharge and average flow to find these concentrations at a much larger scale, showing that this package could be useful in studies like this in the future. 
 
-The `gamut` package is open source and may be downloaded using the [devtools](https://devtools.r-lib.org/) package [@Wickham:2020].
+In addition to water contamination analysis, the `gamut` package has the ability to reveal which source watersheds are heavily protected by receiving cites. This information can inform land use and energy expansion scenarios applied in MSD research, for example by preventing significant expansion of human developments in protected source watersheds. `gamut` may also be used in large-scale hydrological modeling to correctly assign urban water demands to specific intakes. Whether research is being done on water scarcity, water pollution, or urbanization effects, the `gamut` package provides useful data that can brings greater understanding of anthropogenic impacts on city water resources. 
 
-`devtools::install_github("https://github.com/IMMM-SFA/gamut.git")`
+The `gamut` package is open source and may be downloaded using the [devtools](https://devtools.r-lib.org/) package with the code below [@Wickham:2020]. Further instructions on package download can be found in the [documentation](https://github.com/IMMM-SFA/gamut#readme).
+
+```r
+install.packages("devtools")
+library(devtools)
+devtools::install_github('IMMM-SFA/gamut')
+library(gamut)
+```
 
 ### Dependencies
 
@@ -137,6 +147,6 @@ The `gamut` package is open source and may be downloaded using the [devtools](ht
 
 ### Acknowledgements
 
-This research was supported by the U.S. Department of Energy, Office of Science, as part of research in [MultiSector Dynamics, Earth and Environmental System Modeling Program](https://climatemodeling.science.energy.gov/program/multisector-dynamics).
+This research was supported by the U.S. Department of Energy, Office of Science, as part of research in [MultisectorDynamics, Earth and Environmental System Modeling Program](https://climatemodeling.science.energy.gov/program/multisector-dynamics).
 
 ### References

@@ -2,7 +2,7 @@
 
 #' Create an sf object from a shapefile
 #'
-#' Create an sf object from a full path to shapefile with file name and extension
+#' @details Create an sf object from a full path to shapefile with file name and extension
 #'
 #' @param shp_path character. A full path to the input shapefile with file name and extension
 #' @param quiet boolean.
@@ -21,7 +21,7 @@ import_shapefile <- function(shp_path, quiet = TRUE, method = "sf") {
 
 #' Create a raster object from a file path
 #'
-#' Create a raster object from a full path to raster file name and extension
+#' @details Create a raster object from a full path to raster file name and extension
 #'
 #' @param raster_path character. A full path to the input raster file with file name and extension
 #' @return raster object
@@ -35,8 +35,7 @@ import_raster <- function(raster_path) {
 
 #' get_cities
 #'
-#' Read internal data file that specifies all 236 US cities from UWB database.
-#' Provides consistent mapping across cities, intakes and watersheds.
+#' @details Read internal data file that specifies all 236 US cities from UWB database. Provides consistent mapping across cities, intakes and watersheds.
 #' @importFrom vroom vroom cols
 #' @author Sean Turner (sean.turner@pnnl.gov)
 #' @export
@@ -55,7 +54,7 @@ get_cities <- function(){
 
 #' get_crop_mapping
 #'
-#' Read internal data file that specifies the GCAM classification for certain crop types.
+#' @details Read internal data file that specifies the GCAM classification for certain crop types.
 #' @import vroom
 #' @author Kristian Nelson (kristian.nelson@pnnl.gov)
 #' @export
@@ -85,7 +84,7 @@ get_crop_mapping <- function(){
 
 #' get_ucs_power_plants
 #'
-#' Read the UCS database
+#' @details This function reads the UCS power plant database
 #' @param ucs_file_path full path of UCS xlsx file within data_dir
 #' @param method tool used to convert to spatial data; either 'sp' or 'sf'
 #' @importFrom readxl read_xlsx
@@ -169,9 +168,7 @@ get_ucs_power_plants <- function(ucs_file_path,
 
 #' Get raster frequency per class from polygon input areas
 #'
-#' Get the coverage per class of raster values represented in the input raster dataset
-#' when restricted to the input watershed polygons for a target city.
-#'
+#' @details Get the coverage per class of raster values represented in the input raster dataset when restricted to the input watershed polygons for a target city.
 #' @param raster_object character. An object of class RasterLayer.
 #' @param polygon character. A polygon to define spatial boundary of raster value counts (e.g. a given city's watersheds)
 #' @return table of crop types present and their coverage within the polygon area
@@ -204,7 +201,7 @@ get_zonal_data <- function(raster_object, polygon) {
 
 #' Mask raster to polygon
 #'
-#' @details masks a raster file against a chosen polygon.
+#' @details This function masks a raster file against a chosen polygon. This function differs from a normal mask because it makes sure the projections are the same for both layers.
 #' @param raster_object character. An object of class RasterLayer.
 #' @param polygon character. A polygon to define spatial boundary of raster value counts (e.g. a given city's watersheds)
 #' @importFrom sf st_crs st_transform st_as_sf
@@ -324,7 +321,7 @@ reclassify_raster <- function(crop_cover_levels){
 
 #' get_demeter_file
 #' @param irrigation_file_path FUll path to the demeter data file
-#' @details Load demeter file for irrigation and rainfed crop data
+#' @details This function loads in the demeter file for irrigation and rainfed crop data
 #' @import vroom
 #' @importFrom sp SpatialPointsDataFrame
 #' @author Kristian Nelson (kristian.nelson@pnnl.gov)
@@ -369,7 +366,7 @@ get_demeter_file <- function(irrigation_file_path){
 
 #' get_irrigation_count
 #' @param irrigation_city irrigation data subsetted by city watersheds
-#' @details Count irrigated crops vs rainfed crops and determine irrigation status
+#' @details This function counts irrigated crops vs rainfed crops and determines irrigation status
 #' @importFrom tibble enframe
 #' @importFrom dplyr mutate case_when filter if_else
 #' @importFrom tidyr separate spread
@@ -412,7 +409,7 @@ get_irrigation_count <- function(irrigation_city){
 
 #' get_nlud_names
 #' @param economic_ids dataframe of nlud sector ids
-#' @details Load in nlud_id_table.csv and merge with the economic_ids to get class names
+#' @details This function loads in the National Land Use Dataset IDs and merges it with the economic_ids to get class names
 #' @import vroom
 #' @importFrom dplyr left_join
 #' @author Kristian Nelson (kristian.nelson@pnnl.gov)
@@ -439,7 +436,7 @@ get_nlud_names <- function(economic_ids){
 #' get_hydro_dataset
 #' @param data_dir your data directory
 #' @param hydro_file_path hydro plants data file path
-#' @details Load in nlud_id_table.csv and merge with the economic_ids to get class names
+#' @details This function loads in a hydro power plant dataset and filters out the necessary columns for the package.
 #' @importFrom readxl read_xlsx
 #' @author Kristian Nelson (kristian.nelson@pnnl.gov)
 #' @export
@@ -458,7 +455,7 @@ get_hydro_dataset <- function(data_dir, hydro_file_path){
 
 
 #' get_population
-#' @details Census populations
+#' @details This function loads in US Census population data for the cities in gamut.
 #' @importFrom vroom vroom cols
 #' @author Sean Turner (sean.turner@pnnl.gov)
 get_population <- function(){
@@ -469,7 +466,7 @@ get_population <- function(){
 
 #' get_watershed_ts
 #' @param watersheds select watershed
-#' @details Load in runoff time series and select the watershed being analyzed and its time series
+#' @details This function loads in runoff time series and selects the watershed being analyzed and its time series. This information is used in the yield analysis.
 #' @importFrom vroom vroom cols
 #' @importFrom dplyr select one_of
 #' @importFrom tidyr gather separate
@@ -486,7 +483,7 @@ get_watershed_ts <- function(watersheds){
 }
 
 #' get_irrigation_bcm
-#' @details load in irrigation bcm file path
+#' @details This function loads in HUC2 irrigation data in billion cubic meters.
 #' @importFrom vroom vroom cols
 #' @author Kristian Nelson (kristian.nelson@pnnl.gov)
 get_irrigation_bcm <- function(){
@@ -498,7 +495,7 @@ get_irrigation_bcm <- function(){
 
 #' get_watershed_usage
 #' @param city city that is being analyzed
-#' @details load in watershed usage table
+#' @details This function loads in the watershed usage table which provides information on how much a city uses a certain watershed.
 #' @importFrom vroom vroom cols
 #' @author Kristian Nelson (kristian.nelson@pnnl.gov)
 get_watershed_usage <- function(city){
@@ -516,7 +513,7 @@ get_watershed_usage <- function(city){
 #' @param lc_values land cover values
 #' @param polygon_area area of select watershed
 #' @param land_table land table created by functions
-#' @details calculate runoff volume in meters cubed per second
+#' @details This function calculates runoff volume in meters cubed per second for different land covers across the CONUS.
 #' @importFrom tidyr as_tibble
 #' @importFrom dplyr rename
 #' @importFrom raster mask getValues crop area resample
@@ -551,7 +548,7 @@ get_runoff_values <- function(cropcover_agg, runoff_agg, lc_values, polygon_area
 }
 
 #' get_wasteflow_points
-#' @details load in waste flow table and converts to Spatial Point Dataframe
+#' @details This function loads in a waste flow table and converts to Spatial Point Dataframe.
 #' @importFrom vroom vroom cols
 #' @importFrom sp SpatialPointsDataFrame CRS
 #' @importFrom dplyr filter
@@ -584,7 +581,7 @@ get_wasteflow_points <- function(){
 #' get_source_contribution
 #' @param data_dir your data directory
 #' @param file_paths the file paths to the gamut inputs
-#' @details get a city's water source contribution breakdown
+#' @details This function gets a city's water source contribution breakdown. This data is from the UWSCatCH dataset.
 #' @importFrom vroom vroom cols
 #' @importFrom dplyr filter
 #' @author Sean Turner (sean.turner@pnnl.gov)
@@ -598,7 +595,7 @@ get_source_contribution <- function(data_dir,file_paths){
 }
 
 #' get_epa_facilities
-#' @details import EPA facilities data
+#' @details This function imports EPA facilities data which has data on facility location and type. The function takes SIC codes and reclassifies them to new categories.
 #' @importFrom sf st_as_sf
 #' @importFrom vroom vroom cols
 #' @importFrom dplyr filter select mutate case_when
