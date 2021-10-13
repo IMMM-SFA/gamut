@@ -135,7 +135,7 @@ library(gamut)
     sf [@Pebesma:2018],
     sp [@Bivand:2013],
     spex [@Sumner:2020],
-    stringr [@Wickham:2019],
+    stringr [@Wickham2:2019],
     tibble [@Muller:2020],
     tidyr [@Wickham2:2020],
     vroom [@Hester:2021],
