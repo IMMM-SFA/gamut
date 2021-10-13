@@ -44,7 +44,7 @@ these other options to install gamut:
 install_local('path/to/package')
 ```
 
-2.  Clone \[the repo\]\[repository\] to your computer using
+2.  Clone the repo to your computer using
     `git clone "https://github.com/IMMM-SFA/gamut"`. You can then load
     this project into your RStudio and install it.
 

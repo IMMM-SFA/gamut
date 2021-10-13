@@ -37,7 +37,7 @@ If you run into problems with the remote installation, you may also try these ot
 install_local('path/to/package')
 ```
 
-2. Clone [the repo][repository] to your computer using `git clone "https://github.com/IMMM-SFA/gamut"`. You can then load this project into your RStudio and install it.
+2. Clone the repo to your computer using `git clone "https://github.com/IMMM-SFA/gamut"`. You can then load this project into your RStudio and install it.
 
 NOTE: Depending on your version of R, you may need to install Rtools to retrieve the package. If you have trouble installing it with `install.packages("Rtools")`, you can find the install file [here](https://cran.r-project.org/bin/windows/Rtools/). Depending on your version of `sf`, also may need to install the package `Rcpp` in order for `gamut` to build correctly. 
 
