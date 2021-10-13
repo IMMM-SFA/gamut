@@ -10,7 +10,7 @@ tags:
 - Geospatial
 date: "30 September 2021"
 output:
-  html_document: 
+  html_document:
     df_print: paged
 authors:
 - name: Kristian D. Nelson
@@ -95,14 +95,14 @@ Table 1: Metrics reported in `gamut`
 | av\_fl\_max\_conc\_pct                | Point PPCS (based on flow, worst-case catchment only)                                   | %                     |
 | av\_ro\_max\_conc\_pct                | Point PPCS (based on runoff, worst-case catchment only)                                 | %                     |
 | surface\_contribution\_pct            | Proportion of total average supply made up from surface water                           | %                     |
-| importance\_of\_worst\_ watershed\_pct | Proportion of total average supply made up from most heavily contamined watershed       | % | 
+| importance\_of\_worst\_ watershed\_pct | Proportion of total average supply made up from most heavily contamined watershed       | % |
           |
 
 ### Statement of Need
 
-Multisector Dynamics (MSD) research  is the study of the co-evolution of human and natural systems. This research requires infrastructure expansion and land use scenarios, resource demand projections, and multisectoral modeling to capture the impacts of trends and shocks on human systems. The `gamut` package offers new data that meet a number of MSD needs. The package may be used to infer possible water resources expansion strategies for major cities in the United States. For example, cities found to be heavily exposed to potential contamination may be more likely to seek alternative means of supply (e.g., water transfers) or invest in water reuse facilities. In a study by Rice et. al (2013) which looked at de facto wastewater reuse across the US, it was found that there had been an increase in wastewater concentrations in drinking water treatment plants from a 1980 EPA report, especially at low flow conditions [@Rice:2013]. The `gamut` package has the ability to look at wastewater discharge and average flow to find these concentrations at a much larger scale, showing that this package could be useful in studies like this in the future. 
+Multisector Dynamics (MSD) research  is the study of the co-evolution of human and natural systems. This research requires infrastructure expansion and land use scenarios, resource demand projections, and multisectoral modeling to capture the impacts of trends and shocks on human systems. The `gamut` package offers new data that meet a number of MSD needs. The package may be used to infer possible water resources expansion strategies for major cities in the United States. For example, cities found to be heavily exposed to potential contamination may be more likely to seek alternative means of supply (e.g., water transfers) or invest in water reuse facilities. In a study by Rice et. al (2013) which looked at de facto wastewater reuse across the US, it was found that there had been an increase in wastewater concentrations in drinking water treatment plants from a 1980 EPA report, especially at low flow conditions [@Rice:2013]. The `gamut` package has the ability to look at wastewater discharge and average flow to find these concentrations at a much larger scale, showing that this package could be useful in studies like this in the future.
 
-In addition to water contamination analysis, the `gamut` package has the ability to reveal which source watersheds are heavily protected by receiving cites. This information can inform land use and energy expansion scenarios applied in MSD research, for example by preventing significant expansion of human developments in protected source watersheds. `gamut` may also be used in large-scale hydrological modeling to correctly assign urban water demands to specific intakes. Whether research is being done on water scarcity, water pollution, or urbanization effects, the `gamut` package provides useful data that can brings greater understanding of anthropogenic impacts on city water resources. 
+In addition to water contamination analysis, the `gamut` package has the ability to reveal which source watersheds are heavily protected by receiving cites. This information can inform land use and energy expansion scenarios applied in MSD research, for example by preventing significant expansion of human developments in protected source watersheds. `gamut` may also be used in large-scale hydrological modeling to correctly assign urban water demands to specific intakes. Whether research is being done on water scarcity, water pollution, or urbanization effects, the `gamut` package provides useful data that can brings greater understanding of anthropogenic impacts on city water resources.
 
 The `gamut` package is open source and may be downloaded using the [devtools](https://devtools.r-lib.org/) package with the code below [@Wickham:2020]. Further instructions on package download can be found in the [documentation](https://github.com/IMMM-SFA/gamut#readme).
 
@@ -115,7 +115,7 @@ library(gamut)
 
 ### Dependencies
 
-`gamut` relies on functionality from the following R packages: 
+`gamut` relies on functionality from the following R packages:
     clisymbols [@Csardi:2017],
     crayon [@Csardi:2017],
     dplyr [@Henry:2020],
@@ -140,7 +140,6 @@ library(gamut)
     tidyr [@Wickham:2020],
     vroom [@Hester:2021],
     testthat [@Wickham:2011],
-    knitr [@Xie:2014],
     rmarkdown [@Xie:2018],
     knitr [@Xie:2014].
 
