@@ -141,10 +141,6 @@ count_watershed_data <- function(data_dir,
   # read in NHD flow shapefile
   import_shapefile(file.path(data_dir, file_paths["nhd_flow"])) %>% st_as_sf() -> watershed_nhd_flows
 
-  # temporary fix for Jackson MS
-  if(watersheds == 3743){
-    runoff_totals <- get_watershed_ts(3683) %>% mutate(watershed = 3743)
-  }
 
   # map through all cities, computing teleconnections
   watersheds %>%
@@ -224,6 +220,13 @@ count_watershed_data <- function(data_dir,
 
         #-------------------------------------------------------
         # TELECONNECTION - WATERSHED RUNOFF AND FLOW VALUES
+
+        # temporary fix for Jackson MS
+        if(watershed == 3743){
+          runoff_totals <- get_watershed_ts(3683) %>%
+            mutate(watershed = 3743)
+        }
+
         runoff_totals %>%
           filter(watershed == !!watershed) ->
           watershed_runoff
